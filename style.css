@@ -277,8 +277,22 @@ footer::before{
         height: 400px;
     }
 
+    .image-text {
+        min-width: 255px;
+        top: 10px;
+        left: 300px;
+    }
+
     .icons {
         display: none;
+    }
+
+    .about-container{
+        margin-top: 50px;
+    }
+
+    .about{
+        text-align: center;
     }
 
     .about::before {
@@ -293,7 +307,7 @@ footer::before{
         content: "";
         display: block;
         float: left;
-        height: 250px;
+        height: 200px;
         width: 280px;
     }
 
@@ -317,8 +331,75 @@ footer::before{
         min-width: 200px;
         height: auto;
         background-image: url("images/mona-portrait.jpg");
-        
-    }
-    
-    
+    }    
 }
+
+@media (max-width: 759px) {
+    header{
+        flex-direction: column;
+    }
+
+    .header-img {
+        width: 80vw;
+        height: auto;
+    }
+
+    body {
+        padding: 10px;
+        overflow-x: hidden;
+    }
+
+    .about-container {
+        padding: 10px;
+        min-width: 0;
+        flex: 1;
+        width: 100%;
+    }
+
+    .icons {
+        align-self: center;
+    }
+
+    .image-text{
+        left: 2%;
+        font-size: 100px;
+        text-align: center;
+    }
+
+    .about {
+        text-align: center;
+    }
+
+    main {
+        height: 350vh;
+    }
+
+    .cards-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    footer {
+        flex-direction: column;
+        height: 90vh;
+    }
+
+    .footer-img {
+        position: absolute;
+
+       
+        top: 50vh;
+        left: -5vw;
+        width: 110vw;
+        background-image: url("images/IMG_2020\ copy.jpg");
+        background-size: cover;
+    }  
+
+    .mail > img, .phonenumber > img {
+        display: none;
+    }
+
+    .contact-icons-container {
+        align-self: center;
+    }
+}   
