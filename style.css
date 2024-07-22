@@ -234,10 +234,14 @@ footer::before{
 
 }
 
-footer > img {
+.footer-img {
     margin-top: 50px;
     width: 560px;
     height: 400px;
+    min-width: 520px;
+    background-image: url("images/IMG_2020\ copy.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .contact-container{
@@ -277,10 +281,44 @@ footer > img {
         display: none;
     }
 
+    .about::before {
+        content: "";
+        display: block;
+        float: left;
+        height: 50px;
+        width: 280px;
+    }
+
+    .about-text::before{
+        content: "";
+        display: block;
+        float: left;
+        height: 250px;
+        width: 280px;
+    }
+
     .about-placeholder {
-        display: inline-block;
-        width: 300px;
+        width: 200vw;
         height: 200px;
     }
+
+    .cards-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+    
+    main {
+        height: 150vh;
+    }
+
+    .footer-img {
+        width: 300px;
+        min-width: 200px;
+        height: auto;
+        background-image: url("images/mona-portrait.jpg");
+        
+    }
+    
     
 }
